@@ -13,16 +13,17 @@ Start a terminal (for port 3000).
 ```bash
 git clone https://github.com/hassehulabeck/express-server-tennis
 cd express-server-tennis
+npm install
 nodemon server.js
 ```
 
 Start another terminal (for port 4000).
 
 ```bash
-cd opponent 
+cd opponent
+npm install 
 nodemon server.js
 ```
-
 
 ## Wanna help and develop?
 
