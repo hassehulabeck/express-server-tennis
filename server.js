@@ -4,6 +4,7 @@ import { playerDecision } from './player-decision.js';
 
 const app = express()
 const port = 3000
+const opponent = 4000
 
 app.use(express.json())
 
@@ -15,7 +16,7 @@ app.get('/', async (req, res) => {
     requestCounter++;
     console.log(`Making request #${requestCounter} to server on port 4000`);
     setTimeout(() => {
-      res.send(playerDecision());
+      res.send(playerDecision(opponent));
     }, 1000)
   } else {
     res.send({ message: "Reached maximum request limit of 10" });
@@ -27,7 +28,7 @@ app.post('/', async (req, res) => {
     requestCounter++;
     console.log('Received from 4000:', req.body);
     setTimeout(() => {
-      res.send(playerDecision());
+      res.send(playerDecision(opponent));
     }, 1000)
   }
 })
