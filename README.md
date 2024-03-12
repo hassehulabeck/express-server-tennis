@@ -27,5 +27,5 @@ nodemon server.js
 
 ## Wanna help and develop?
 
-Please do. There may be some open issues, and if not, please add one if you want to.
+Please do. There may be some open issues, and if not, please add one if you want to. You can read how in [CONTRIBUTING.md](./CONTRIBUTING.md)
 
