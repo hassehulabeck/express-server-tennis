@@ -1,10 +1,13 @@
 import express from 'express'
 import fetch from 'node-fetch';
 import { playerDecision } from './player-decision.js';
+import dotenv from 'dotenv';
+
+dotenv.config()
 
 const app = express()
-const port = 3000
-const opponent = 4000
+const port = process.env.PLAYER1_PORT
+const opponent = process.env.PLAYER2_PORT
 
 app.use(express.json())
 

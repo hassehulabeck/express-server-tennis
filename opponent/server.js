@@ -1,8 +1,12 @@
 import express from 'express';
 import { playerDecision } from './../player-decision.js'
+import dotenv from 'dotenv';
+
+dotenv.config()
+
 const app = express();
-const port = 4000
-const opponent = 3000
+const port = process.env.PLAYER2_PORT
+const opponent = process.env.PLAYER1_PORT
 
 let counter = 0
 
