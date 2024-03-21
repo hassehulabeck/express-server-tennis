@@ -1,6 +1,6 @@
 import express from "express";
 import fetch from "node-fetch";
-import { playerDecision, startServe } from "./player-decision.js";
+import { playerDecision } from "./player-decision.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -19,7 +19,7 @@ app.get("/", async (req, res) => {
     console.log(`Making request #${requestCounter} to server on port 4000`);
     console.log("Serving");
     setTimeout(() => {
-      res.send(startServe(opponent));
+      res.send(playerDecision(opponent, requestCounter));
     }, 1000);
   } else {
     res.send({ message: "Reached maximum request limit of 10" });
